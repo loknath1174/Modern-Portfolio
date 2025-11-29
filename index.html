@@ -120,6 +120,24 @@
         /* Social/bg elements and containers */
         html.light .project-card { background: linear-gradient(145deg, var(--card), rgba(0,0,0,0.02)); }
 
+        /* Download Resume button - default (dark) keeps white text + border */
+        .btn-resume {
+            transition: all 0.25s ease;
+        }
+
+        /* In light mode make the resume button a gradient with clear text */
+        html.light .btn-resume {
+            background: linear-gradient(90deg, var(--primary-1), var(--primary-2));
+            color: #fff !important;
+            border-color: transparent !important;
+            box-shadow: 0 6px 18px rgba(126,34,206,0.15);
+        }
+
+        html.light .btn-resume:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+        }
+
         
         .gradient-text {
             background: linear-gradient(90deg, var(--primary-1), var(--primary-2));
@@ -304,7 +322,7 @@
 
                 <div class="flex space-x-4">
                     <a href="#projects" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">View Work</a>
-                    <a href="https://drive.google.com/file/d/1LDtKPvNaPSIkeTfELLEt2ZgDKZgw2CxC/view?usp=drive_link" download class="px-6 py-3 rounded-full border border-white text-white font-medium hover:bg-white/10 transition">Download Resume</a>
+                    <a href="https://drive.google.com/file/d/1LDtKPvNaPSIkeTfELLEt2ZgDKZgw2CxC/view?usp=drive_link" download class="px-6 py-3 rounded-full border border-white text-white font-medium hover:bg-white/10 transition btn-resume">Download Resume</a>
                 </div>
                 <div class="flex mt-8 space-x-4">
                     <a href="https://github.com/snsiva33" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
